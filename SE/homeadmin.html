@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beso's Bank</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/homebanker.css">
+
+</head>
+<script src="app.js"></script>
+
+<body>
+    <div class="page-wrapper flex-layout">
+        <aside class="sidebar">
+            <div class="sidebar-avatar">
+                <div class="avatar-image">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
+                        alt="">
+                </div>
+            </div>
+            <ul class="sidebar-links">
+                <li><button type="button" class="link-item" onclick="toggleDList()">View Customers' reported
+                        issues</button></li>
+
+                <li class="link-item dropdown">
+                    <details>
+                        <summary>Bankers' activity</summary>
+                        <ul class="dropdown-list">
+                            <li><button type="button" class="dropdown-item" onclick="toggleAList()">View reported
+                                    alerts</button></li>
+                            <li><button type="button" class="dropdown-item" onclick="toggleTable()">view monthly
+                                    summary</button></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><button type="button" class="link-item" onclick="toggleAtable()">View Customers' Feedback</button>
+                </li>
+                <li><button type="button" class="link-item" onclick="toggleP()">Password and account support</button>
+                </li>
+
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <nav>
+                    <button class="sidebar-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="./homeadmin.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </nav>
+                <div class="nav-collapse">
+                    <ul class="nav-links">
+                        <li><a href="./homeadmin.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                
+                    </ul>
+                </div>
+            </header>
+
+            <section class="page-content">
+                <form id="content">
+                    <h2>Welcome back</h2>
+                    <p>Manage and view all activity from your home</p>
+                    <p>Click on the menu to get started</p>
+                    <p>Enjoy your stay</p>
+                </form>
+                <br>
+
+                <ul id="item-list" class="hidden">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 1">
+                            Hana Elmoatasem ID=23 "My transactions doesn't appear on my transaction list"
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 2">
+                            Basma Alaa ID=24 "I can't find any bills to pay while the site sent me a reminder"
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 3">
+                            Peter ashraf ID=25 "I payed with my debit card and it was deducted but Payment wasn't
+                            successful"
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 4">
+                            Ahmed Maged ID=26 "I transferred money to a wrong account i want a refund"
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 5">
+                            Mohamed Farid ID=30 "I payed my bills and it wasn't deducted from my balance"
+                        </label>
+                    </li>
+                </ul>
+                <button type="button" id="getchecked"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    class="hidden" onclick="resolveissue()"> Send issue(s)</button>
+
+
+                <ol style="list-style-type: decimal; padding-left: 20px;" id="Alerts" class="hidden">
+                    <li> Banker has reported alert about system crash down</li>
+                    <li> Banker has reported alert about client's credit card theft </li>
+                    <li>banker has reported alert about debug in the system</li>
+                </ol>
+
+                <br>
+                <form id="myTable" class="hidden">
+                    <table id="myTable">
+
+                        <tr>
+                            <th>Banker 1</th>
+                            <th>Banker 2</th>
+                        </tr>
+                        <tr>
+                            <td>sent an alert in the past month</td>
+                            <td>Sent 2 alerts in the past month</td>
+                        </tr>
+                        <tr>
+                            <td>created 2 accounts</td>
+                            <td>created an account</td>
+                        </tr>
+                        <tr>
+                            <td>rejected a loan</td>
+                            <td>accepted 2 credit cards</td>
+                        </tr>
+
+                    </table>
+                </form>
+                <br>
+                <form id="Feedback" class="hidden">
+                    <table id="myTable1">
+
+                        <tr>
+                            <th> Basma Alaa</th>
+                            <th> Hana Elmoatasem</th>
+                        </tr>
+                        <tr>
+                            <td>Website is very easy to use and didnt find difficulty in proccessing</td>
+                            <td>It needs more work to be done on it</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rating">
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating">
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <form id="pass" class="hidden">
+                    <ul id="Pass">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="itemm">
+                                Hana Elmoatasem ID=23 wants to change password
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="itemm">
+                                Basma Alaa ID=24 wants to change username and passowrd
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="itemm">
+                                Peter ashraf ID=25 wants to close his account
+                            </label>
+                        </li>
+                    </ul>
+                    <button id="approve" class="hidden"
+                        style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                        onclick="approve()"> approve</button>
+
+                </form>
+
+                <br>
+
+            </section>
+        </main>
+    </div>
+    <script src="./js/main2.js"></script>
+</body>
+
+</html>
+<script>
+
+
+
+    function toggleTable() {
+
+        var table = document.getElementById("myTable");
+        table.classList.toggle("hidden");
+
+
+
+    }
+
+
+
+
+    function toggleDList() {
+
+        var list = document.getElementById("item-list");
+        list.classList.toggle("hidden");
+        var button = document.getElementById("getchecked");
+        button.classList.toggle("hidden");
+        var output = document.getElementById("output");
+        var content = document.getElementById("content");
+        content.style.display = "none";
+
+
+    }
+
+    function toggleAList() {
+
+        var list = document.getElementById("Alerts");
+        list.classList.toggle("hidden");
+        var output = document.getElementById("output");
+        var content = document.getElementById("content");
+        content.style.display = "none";
+        var content = document.getElementById("item-list");
+        content.style.display = "none";
+        var content = document.getElementById("getchecked");
+        content.style.display = "none";
+    }
+    function resolveissue() {
+        window.location.href = "homeadmin.html";
+        var checkboxes = document.getElementsByName("item");
+        var items = [];
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                items.push(checkboxes[i].value);
+            }
+        }
+        var output = "";
+
+        for (var i = 0; i < items.length; i++) {
+            output = "the issue has been sent to the manager successfuly";
+        }
+
+        alert(output);
+    }
+    function toggleAtable() {
+        var table = document.getElementById("Feedback");
+        table.classList.toggle("hidden");
+        var content = document.getElementById("content");
+        content.style.display = "none";
+    }
+    function toggleP() {
+        var list = document.getElementById("pass");
+        list.classList.toggle("hidden");
+        var button = document.getElementById("approve");
+        button.classList.toggle("hidden");
+        var content = document.getElementById("content");
+        content.style.display = "none";
+
+    }
+    function approve() {
+        window.location.href = "homeadmin.html";
+        var checkboxes = document.getElementsByName("itemm");
+        var items = [];
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                items.push(checkboxes[i].value);
+            }
+        }
+        var output = "";
+
+        for (var i = 0; i < items.length; i++) {
+            output = "a mail has been sent to the user to reset info";
+        }
+
+        alert(output);
+    }
+
+
+
+
+
+</script>
+<style>
+    .hidden {
+        top: 0;
+        position: relative;
+        display: none;
+    }
+
+    .frameless-text {
+        top: 0;
+        position: relative;
+        display: none;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .chatbox {
+        top: 0;
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background: #281f1f;
+        border: 1px solid #ccc;
+        overflow-y: scroll;
+        display: none;
+    }
+
+    .message {
+        top: 0;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .user {
+        top: 0;
+        position: relative;
+        text-align: right;
+    }
+
+    .automated-reply {
+        top: 0;
+        position: relative;
+        text-align: left;
+        font-style: italic;
+        color: #888;
+    }
+
+    table {
+        border-spacing: 10px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid rgb(244, 239, 239);
+        padding: 8px;
+    }
+
+    .rating {
+        color: gold;
+        /* Change the color of the stars */
+        font-size: 24px;
+        /* Adjust the size of the stars */
+    }
+
+    .star {
+        display: inline-block;
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+    }
+</style>

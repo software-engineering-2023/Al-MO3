@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/homeuser.css">
+
+</head>
+
+<script>
+    const array1 = ["bankAccount", "CreditCard", "creditCardForm", "points", "redeem", "cct", "at", "transferForm", "applyLoan", "viewLoan",
+        "bills", "donations", "ATM", "branch", "debit", "contact", "reminders", "report", "main"];
+
+    function toggleAccount() {
+        var flag = false;
+        var div = document.getElementById("bankAccount");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "bankAccont") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+
+
+    }
+    function toggleCards() {
+        var flag = false;
+        var div = document.getElementById("CreditCard");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "CreditCard") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+
+
+    }
+
+    function toggleForm() {
+
+        var flag = false;
+        var div = document.getElementById("creditCardForm");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "creditCardForm") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function togglePoints() {
+
+        var flag = false;
+        var div = document.getElementById("points");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "points") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleRedeem() {
+
+        var flag = false;
+        var div = document.getElementById("redeem");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "redeem") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+
+
+
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Display the message
+        var messageElement = document.getElementById("message");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+
+    }
+
+
+    function handleSubmitLoan(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Display the message
+        var messageElement = document.getElementById("message6");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+
+    }
+    function handleTransfer(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Display the message
+        var messageElement = document.getElementById("message");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+
+
+    }
+
+    function handleSubmitReport(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Display the message
+        var messageElement = document.getElementById("message10");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+
+    }
+
+
+
+
+
+    function showMessage() {
+        var messageElement = document.getElementById("message2");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+    function showMessage2() {
+        var messageElement = document.getElementById("message3");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+    function toggleCCTransactions() {
+        var flag = false;
+        var div = document.getElementById("cct");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "cct") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleATransactions() {
+        var flag = false;
+        var div = document.getElementById("at");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "at") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleTransfer() {
+        var flag = false;
+        var div = document.getElementById("transferForm");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "transferForm") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function showMessage4() {
+        var messageElement = document.getElementById("message4");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+    function showMessage5() {
+        var messageElement = document.getElementById("message5");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+
+    function showMessage7() {
+        var messageElement = document.getElementById("message7");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+    function showMessage8() {
+        var messageElement = document.getElementById("message8");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+
+    function showMessage9() {
+        var messageElement = document.getElementById("message9");
+        messageElement.style.display = "block";
+        setTimeout(function () {
+            messageElement.style.display = "none";
+        }, 2000);
+    }
+
+    function toggleApplyLoan() {
+        var flag = false;
+        var div = document.getElementById("applyLoan");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "applyLoan") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+    function toggleViewLoan() {
+        var flag = false;
+        var div = document.getElementById("viewLoan");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "viewLoan") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleBills() {
+        var flag = false;
+        var div = document.getElementById("bills");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "bills") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleDonations() {
+        var flag = false;
+        var div = document.getElementById("donations");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "donations") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleATM() {
+        var flag = false;
+        var div = document.getElementById("ATM");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "ATM") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleBranch() {
+        var flag = false;
+        var div = document.getElementById("branch");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "branch") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleDebitCards() {
+        var flag = false;
+        var div = document.getElementById("debit");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "debit") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleContact() {
+        var flag = false;
+        var div = document.getElementById("contact");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "contact") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleReminders() {
+        var flag = false;
+        var div = document.getElementById("reminders");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "reminders") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+    function toggleReport() {
+        var flag = false;
+        var div = document.getElementById("report");
+        if (div.style.display === "none")
+            flag = true;
+        if (flag) {
+            for (let i = 0; i < array1.length; i++) {
+                const element = document.getElementById(array1[i]);
+                if (array1[i] != "report") {
+                    element.style.display = "none";
+                }
+            }
+
+            div.style.display = "block";
+        }
+
+        else {
+            div.style.display = "none";
+        }
+    }
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+
+
+
+
+
+    <div class="page-wrapper flex-layout">
+        <aside class="sidebar">
+            <div class="sidebar-avatar">
+                <div class="avatar-image">
+                    <!-- <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" -->
+                    <img src="./images/kk.jpg">
+                </div>
+            </div>
+            <ul class="sidebar-links">
+                <li> <button type="button" class="link-item" onclick="toggleAccount()"> Accounts</button> </li>
+                <li class="link-item dropdown">
+                    <details>
+                        <summary>Credit Cards</summary>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleCards()">
+                                    View
+                                    your Credit Cards </button></li>
+                            <li class="dropdown-item"> <button type="button" class="link-item" onclick="togglePoints()">
+                                    View Credit Card points </button></li>
+                            <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleRedeem()">
+                                    Redeem Credit Card points </button></li>
+                            <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleForm()">
+                                    Apply for a Credit Card </button></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="link-item dropdown">
+                    <details>
+                        <summary>Transactions</summary>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"> <button type="button" class="link-item"
+                                    onclick="toggleCCTransactions()">
+                                    View Credit Cards Transactions </button></li>
+                            <li class="dropdown-item"> <button type="button" class="link-item"
+                                    onclick="toggleATransactions()">
+                                    View Account Transactions </button></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleTransfer()">
+                        Transfer Money </button></li>
+                <li class="link-item dropdown">
+                    <details>
+                        <summary>Loans</summary>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"> <button type="button" class="link-item"
+                                    onclick="toggleViewLoan()">
+                                    View Active Loans </button></li>
+                            <li class="dropdown-item"> <button type="button" class="link-item"
+                                    onclick="toggleApplyLoan()">
+                                    Apply for a loan </button></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleBills()">
+                        Bills </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleDonations()">
+                        Donations </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleReminders()">
+                        Reminders </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleDebitCards()">
+                        Debit Cards </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleATM()">
+                        View Nearest ATM </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleBranch()">
+                        View Nearest Branch </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleReport()">
+                        Report an Issue </button></li>
+                <li class="dropdown-item"> <button type="button" class="link-item" onclick="toggleContact()">
+                        Contact us </button></li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <nav>
+                    <button class="sidebar-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="./homeuser.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                      
+                    </ul>
+                    <button class="nav-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </nav>
+                <div class="nav-collapse">
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                      
+                    </ul>
+                </div>
+            </header>
+            <section class="page-content">
+
+                <div id="bankAccount" class="acc">
+                    <ul>
+                        <li>
+                            <div class="bank-account">
+                                <h2> Savings Bank Account Details</h2>
+                                <p>Account Number: <span id="account-number">123456789</span></p>
+                                <p>Balance: $<span id="balance">5000</span></p>
+                                <!-- <p>Account Holder: <span id="account-holder"></span></p> -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bank-account">
+                                <h2> Current Bank Account Details</h2>
+                                <p>Account Number: <span id="account-number">123456780</span></p>
+                                <p>Balance: $<span id="balance">50000</span></p>
+                                <!-- <p>Account Holder: <span id="account-holder"></span></p> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div id="CreditCard" class="card">
+                    <h2>Available Credit Cards</h2>
+
+                    <div class="credit-card">
+                        <div class="card-number">Card Number: 1234 5678 9012 3456</div>
+                        <div class="expiry-date">Balance: 15,000$</div>
+                        <div class="expiry-date">Expiry Date: 12/24</div>
+                    </div>
+
+                    <div class="credit-card">
+                        <div class="card-number">Card Number: 9876 5432 1098 7654</div>
+                        <div class="expiry-date">Balance: 115,000$</div>
+                        <div class="expiry-date">Expiry Date: 06/26</div>
+                    </div>
+                </div>
+
+
+                <div id="creditCardForm" class="form">
+                    <h2>Apply for a Credit Card</h2>
+                    <form class="apply-form" id="credit-card-form" onsubmit="return handleSubmit(event)">
+                        <label for="name">Name on Card:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                        <label for="credit-card-number">Credit Card class:</label>
+                        <input type="text" id="credit-card-number" name="credit-card-number"
+                            placeholder="Example : Classic , platinum , titanium" required>
+
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="Expiry Date" required>
+
+                        <button type="submit" id="credit-card-form">Submit Application</button>
+
+                    </form>
+
+                    <div id="message">
+                        Thank you for submitting your application!
+                    </div>
+                </div>
+
+                <div class="creditCardPoints" id="points">
+                    <div class="credit-card">
+                        <h2>Card Number: 1234 5678 9012 3456</h2>
+                        <p>Points: <span>1000</span></p>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Card Number: 9876 5432 1098 7654</h2>
+                        <p>Points: <span>500</span></p>
+                    </div>
+
+
+                </div>
+
+
+                <div class="creditCardPointsRedeem" id="redeem">
+                    <div class="credit-card">
+                        <h2>Card Number: 1234 5678 9012 3456</h2>
+                        <p>Points: <span>1000</span></p>
+                        <button type="button" onclick="showMessage()"> Redeem Points Now!</button>
+                        <div id="message2">
+                            Points redeemed successfully!
+                        </div>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Card Number: 9876 5432 1098 7654</h2>
+                        <p>Points: <span>500</span></p>
+                        <button type="button" onclick="showMessage2()"> Redeem Points Now!</button>
+                        <div id="message3">
+                            Points redeemed successfully!
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="Transactions" id="cct">
+                    <div class="credit-card">
+                        <h2>Card Number: 1234 5678 9012 3456</h2>
+                        <p>Vendor: <span>StarBucks</span></p>
+                        <p>Date: <span>31 May</span></p>
+                        <p>Time: <span>12:30 pm</span></p>
+                        <p>Amount: <span>85$</span></p>
+
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Card Number: 9876 5432 1098 7654</h2>
+                        <p>Vendor: <span>Maine</span></p>
+                        <p>Date: <span>20 May</span></p>
+                        <p>Time: <span>8:30 pm</span></p>
+                        <p>Amount: <span>55$</span></p>
+
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Card Number: 1234 5678 9012 3456</h2>
+                        <p>Vendor: <span>Adidas</span></p>
+                        <p>Date: <span>1 May</span></p>
+                        <p>Time: <span>12:00 pm</span></p>
+                        <p>Amount: <span>1000$</span></p>
+
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Card Number: 9876 5432 1098 7654</h2>
+                        <p>Vendor: <span>Nike</span></p>
+                        <p>Date: <span>1 May</span></p>
+                        <p>Time: <span>12:30 pm</span></p>
+                        <p>Amount: <span>805$</span></p>
+
+                    </div>
+                </div>
+
+
+                <div class="Transfers" id="at">
+                    <div class="credit-card">
+                        <h2>Transfer to BMW</h2>
+                        <p>Reason: <span>New Car downpayment</span></p>
+                        <p>Date: <span>31 May</span></p>
+                        <p>Time: <span>12:30 pm</span></p>
+                        <p>Amount: <span>115,000$</span></p>
+
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Transfer to Peter</h2>
+                        <p>Reason: <span>Vacation Flight tickets</span></p>
+                        <p>Date: <span>20 May</span></p>
+                        <p>Time: <span>8:30 pm</span></p>
+                        <p>Amount: <span>5500$</span></p>
+
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Transfer to Manchester International School</h2>
+                        <p>Reason: <span>Sally and Asser School fees </span></p>
+                        <p>Date: <span>1 May</span></p>
+                        <p>Time: <span>12:00 pm</span></p>
+                        <p>Amount: <span>100,000$</span></p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div id="transferForm" class="trForm">
+                    <h2>Transfer Money</h2>
+                    <form class="apply-form" id="credit-card-form">
+                        <label for="name">Account Number:</label>
+                        <input type="text" id="name" name="name" placeholder="Account Number" required>
+
+                        <label for="email">IBAN:</label>
+                        <input type="text" id="name" name="name" placeholder="IBAN" required>
+
+                        <label for="credit-card-number">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+
+                        <label for="expiry-date">Amount:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="Amount you want to transfer"
+                            required>
+
+                        <button type="button" onclick="showMessage4()" id="credit-card-form">Transfer Now</button>
+                        <div id="message4">
+                            Your Transfer has been successfully performed!
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="applyLoan" class="Loanform">
+                    <h2>Apply for a Loan</h2>
+                    <form class="apply-form" id="credit-card-form" onsubmit="return handleSubmitLoan(event)">
+                        <label for="name"> Desired Loan Amount:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter the Requested Loan Amount" required>
+
+                        <label for="name">Annual Income:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your Annual Income" required>
+
+                        <label for="credit-card-number">Loan will be used For:</label>
+                        <input type="text" id="credit-card-number" name="credit-card-number"
+                            placeholder="Enter what will be the loan used for" required>
+
+                        <label for="expiry-date">Payment Sequence:</label>
+                        <input type="text" id="expiry-date" name="expiry-date"
+                            placeholder="You want to pay Monthly, per Quarter or Yearly" required>
+
+                        <button type="submit" id="credit-card-form">Submit Application</button>
+                        <!-- <div id="message5">
+                            Thank you for submitting your application!
+                        </div> -->
+
+                    </form>
+
+                    <div id="message6">
+                        Thank you for submitting your application!
+                    </div>
+                </div>
+
+
+                <div class="Loans" id="viewLoan">
+                    <div class="credit-card">
+                        <h2>Loan Number: 5059 6789 0000</h2>
+                        <p>Type: <span>Car</span></p>
+                        <p>Start Date: <span>31 May 2023</span></p>
+                        <p>End Date: <span>30 May 2030</span></p>
+                        <p>Amount: <span>85,000$</span></p>
+                        <p>Installments: <span>Monthly</span></p>
+                        <button type="button" id="credit-card-form"> Pay Loan Installment</button>
+
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Loan Number: 7890 9009 1098 </h2>
+                        <p>Type: <span>Personal</span></p>
+                        <p>Start Date: <span>20 May 2020</span></p>
+                        <p>End Date: <span>19 May 2024</span></p>
+                        <p>Amount: <span>165,000$</span></p>
+                        <p>Installments: <span>Yearly</span></p>
+                        <button type="button" id="credit-card-form"> Pay Loan Installment</button>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="Bills" id="bills">
+                    <div class="credit-card">
+                        <h2>Bill Number: 5059</h2>
+                        <p>Type: <span>Electricity Bill</span></p>
+                        <p>Due Date: <span>31 May 2023</span></p>
+                        <p>Amount: <span>100$</span></p>
+                        <button type="button" onclick="showMessage7()" id="credit-card-form"> Pay using Savings
+                            Account</button>
+                        <button type="button" onclick="showMessage7()" id="credit-card-form"> Pay using Current
+                            Account</button>
+                        <div id="message7">
+                            The bill has been successfully payed!
+                        </div>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Bill Number: 5061</h2>
+                        <p>Type: <span>ADSL Bill</span></p>
+                        <p>Due Date: <span>4 June 2023</span></p>
+                        <p>Amount: <span>140$</span></p>
+                        <button type="button" onclick="showMessage8()" id="credit-card-form"> Pay using Savings
+                            Account</button>
+                        <button type="button" onclick="showMessage8()" id="credit-card-form"> Pay using Current
+                            Account</button>
+                        <div id="message8">
+                            The bill has been successfully payed!
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="Donations" id="donations">
+                    <div class="credit-card">
+                        <h2>Charity Organization Name: 57357</h2>
+                        <label for="name"> Desired Donation Amount:</label>
+                        <input type="number" id="name" name="name" placeholder="Enter the Donation Amount" required>
+                        <button type="button" onclick="showMessage9()" id="credit-card-form"> Donate using Savings
+                            Account</button>
+                        <button type="button" onclick="showMessage9()" id="credit-card-form"> Donate using Current
+                            Account</button>
+                        <div id="message9">
+                            Thank you for your Donation, May Allah Bless you!
+                        </div>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Charity Organization Name: Magdy Yaqoub</h2>
+                        <label for="name"> Desired Donation Amount:</label>
+                        <input type="number" id="name" name="name" placeholder="Enter the Donation Amount" required>
+                        <button type="button" onclick="showMessage9()" id="credit-card-form"> Donate using Savings
+                            Account</button>
+                        <button type="button" onclick="showMessage9()" id="credit-card-form"> Donate using Current
+                            Account</button>
+                        <div id="message9">
+                            Thank you for your Donation, May Allah Bless you!
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="ATM" id="ATM">
+
+                    <h1>Nearest ATM </h1>
+                    <div class="credit-card">
+                        <h2>Point 90 Mall</h2>
+                        <button type="button" id="credit-card-form"> Get Google Maps Directions
+                        </button>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Spot Mall</h2>
+                        <button type="button" id="credit-card-form"> Get Google Maps Directions</button>
+                    </div>
+
+                </div>
+
+
+                <div class="branch" id="branch">
+
+                    <h1>Nearest Branch </h1>
+                    <div class="credit-card">
+                        <h2>Point 90 Mall</h2>
+                        <button type="button" id="credit-card-form"> Get Google Maps Directions
+                        </button>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Spot Mall</h2>
+                        <button type="button" id="credit-card-form"> Get Google Maps Directions</button>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Mivida Branch</h2>
+                        <button type="button" id="credit-card-form"> Get Google Maps Directions</button>
+                    </div>
+
+                </div>
+
+
+                <div class="issue-form" id="report">
+                    <h2>Report an Issue</h2>
+                    <form onsubmit="return handleSubmitReport(event)">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+
+                        <button type="submit" id="credit-card-form">
+                            Submit
+                        </button>
+                        <div id="message10">
+                            Your issue has been recorded, will get to you back soon
+                        </div>
+                    </form>
+                </div>
+
+                <div class="reminders" id="reminders">
+
+                    <h1>Reminders </h1>
+                    <div class="credit-card">
+                        <h2>Loan Installment is Due on 20 May 2023</h2>
+                        <!-- <button type="button" id="credit-card-form"> Get Google Maps Directions
+                        </button> -->
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Credit Card ending ***3456</h2>
+                        <p>Your credit card ending ***3456 statement for May has been issued for 2900$. Your minimum
+                            payment is 192.92$ to be paid before 30/5/2023.
+
+                        </p>
+                        <!-- <button type="button" id="credit-card-form"> Get Google Maps Directions</button> -->
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>New Certificate with 22% interest rate is Now Available!</h2>
+                        <!-- <button type="button" id="credit-card-form"> Get Google Maps Directions</button> -->
+                    </div>
+
+                </div>
+
+
+                <div class="contact-info" id="contact">
+                    <h2>Contact Us</h2>
+                    <p><strong>Email:</strong> Finova@eg.org</p>
+                    <p><strong>Phone:</strong> 19666</p>
+                    <p><strong>Address:</strong> Villa 126, Mivida, Fifth settlement</p>
+                    <p><strong>Working Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+                </div>
+
+
+                <div id="debit" class="debitCard">
+                    <h1>Debit Cards</h1>
+
+                    <div class="credit-card">
+                        <h2>Savings Account Debit Card</h2>
+                        <div class="card-number">Card Number: 4049 8009 2020 3456</div>
+                        <div class="expiry-date">Balance: 50,000$</div>
+                        <div class="expiry-date">Expiry Date: 12/24</div>
+                    </div>
+
+                    <div class="credit-card">
+                        <h2>Current Account Debit Card</h2>
+                        <div class="card-number">Card Number: 5006 2090 2020 1010</div>
+                        <div class="expiry-date">Balance: 5,000$</div>
+                        <div class="expiry-date">Expiry Date: 2/26</div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="main">
+                    <h2 class="centered-text">Welcome to HNB</h2>
+                    <p class="centered-text">Here you can find all your banking needs</p>
+                    <p class="centered-text">Click on the menu to get started</p>
+                    <!-- <p>6</p> -->
+                    <p class="centered-text">Enjoy your stay</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./js/main2.js"></script>
+</body>
+
+</html>

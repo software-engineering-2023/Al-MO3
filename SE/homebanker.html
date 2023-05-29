@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beso's Bank</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/homebanker.css">
+    <script>
+        function toggleList() {
+
+            var list = document.getElementById("item-list");
+            list.classList.toggle("hidden");
+            var button = document.getElementById("getchecked");
+            button.classList.toggle("hidden");
+            var output = document.getElementById("output");
+            var textElement = document.getElementById("framelessText");
+            textElement.classList.toggle("hidden");
+        }
+        function getHugeTransactions() {
+            window.location.href = "homebanker.html";
+            var checkboxes = document.getElementsByName("item");
+            var items = [];
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    items.push(checkboxes[i].value);
+                }
+            }
+            var output = "";
+
+            for (var i = 0; i < items.length; i++) {
+                output += items[i] + " approved" + "\n";
+            }
+
+            alert(output);
+        }
+        function toggleTextbox() {
+            var textbox = document.getElementById("myTextbox");
+            textbox.classList.toggle("hidden");
+            var button = document.getElementById("transGetter");
+            button.classList.toggle("hidden");
+            var textElement = document.getElementById("framelessText2");
+            textElement.classList.toggle("hidden");
+        }
+        function showNameData() {
+            window.location.href = "homebanker.html";
+            var name = document.getElementById("myTextbox").value;
+            var textbox = document.getElementById("dataTextbox");
+            textbox.classList.toggle("hidden");
+            var output = "";
+            output = name + "'s Transactions are \n T1: -100$ Momen and Bashar \n T2: -200$ Mobil GasStation ";
+            alert(output);
+        }
+        function toggleloanlist() {
+            var list = document.getElementById("loan-list");
+            list.classList.toggle("hidden");
+            var button = document.getElementById("getLoans");
+            button.classList.toggle("hidden");
+            var textElement = document.getElementById("framelessText3");
+            textElement.classList.toggle("hidden");
+        }
+        function toggleCClist() {
+            var list = document.getElementById("cc-list");
+            list.classList.toggle("hidden");
+            var button = document.getElementById("getcc");
+            button.classList.toggle("hidden");
+            var textElement = document.getElementById("framelessText9");
+            textElement.classList.toggle("hidden");
+        }
+        function getLoanRequests() {
+            window.location.href = "homebanker.html";
+            var checkboxes = document.getElementsByName("item");
+            var items = [];
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    items.push(checkboxes[i].value);
+                }
+            }
+            var output = "";
+
+            for (var i = 0; i < items.length; i++) {
+                output += items[i] + " granted" + "\n";
+            }
+
+            alert(output);
+        }
+        function getCCApp() {
+            window.location.href = "homebanker.html";
+            var checkboxes = document.getElementsByName("item");
+            var items = [];
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    items.push(checkboxes[i].value);
+                }
+            }
+            var output = "";
+
+            for (var i = 0; i < items.length; i++) {
+                output += items[i] + " granted" + "\n";
+            }
+
+            alert(output);
+        }
+        function toggleAlert() {
+            var textbox = document.getElementById("Alertbox");
+            textbox.classList.toggle("hidden");
+            var button = document.getElementById("alertsender");
+            button.classList.toggle("hidden");
+            var textElement = document.getElementById("framelessText4");
+            textElement.classList.toggle("hidden");
+        }
+        function SendAlert() {
+            window.location.href = "homebanker.html";
+            var text = "Alert sent to clients and admin.";
+            alert(text);
+        }
+        function toggleChatTools() {
+            var textbox = document.getElementById("messageInput");
+            textbox.classList.toggle("hidden");
+            var button = document.getElementById("chatsend");
+            button.classList.toggle("hidden");
+            var chatbox = document.getElementById("chatbox");
+            chatbox.style.display = "block";
+            var textElement = document.getElementById("framelessText5");
+            textElement.classList.toggle("hidden");
+            var button = document.getElementById("hidebutton");
+            button.classList.toggle("hidden");
+
+        }
+        function sendMessage() {
+            var messageInput = document.getElementById("messageInput");
+            var message = messageInput.value;
+
+            if (message !== "") {
+                var chatbox = document.getElementById("chatbox");
+
+                var userMessage = document.createElement("div");
+                userMessage.className = "message user";
+                userMessage.innerHTML = message;
+                chatbox.appendChild(userMessage);
+
+                var automatedReply = document.createElement("div");
+                automatedReply.className = "message automated-reply";
+                automatedReply.innerHTML = "Your Message have been sent to the first client in queue.\n When he replies the system will nnotify you.";
+                chatbox.appendChild(automatedReply);
+
+                messageInput.value = "";
+            }
+        }
+
+        function togglebilllist() {
+            var list = document.getElementById("bill-list");
+            list.classList.toggle("hidden");
+            var button = document.getElementById("automate");
+            button.classList.toggle("hidden");
+            var button2 = document.getElementById("cancelBill");
+            button2.classList.toggle("hidden");
+            var textElement = document.getElementById("framelessText6");
+            textElement.classList.toggle("hidden");
+        }
+        function automateBill() {
+            window.location.href = "homebanker.html";
+            var checkboxes = document.getElementsByName("item");
+            var items = [];
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    items.push(checkboxes[i].value);
+                }
+            }
+            var output = "";
+
+            for (var i = 0; i < items.length; i++) {
+                output += items[i] + " will be automatically paid on due date." + "\n";
+            }
+
+            alert(output);
+        }
+        function cancelBill() {
+            window.location.href = "homebanker.html";
+            var checkboxes = document.getElementsByName("item");
+            var items = [];
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    items.push(checkboxes[i].value);
+                }
+            }
+            var output = "";
+
+            for (var i = 0; i < items.length; i++) {
+                output += items[i] + " will be no longer be paid automatically." + "\n";
+            }
+
+            alert(output);
+        }
+        function getValidity() {
+            window.location.href = "homebanker.html";
+            var name = document.getElementById("clienttext").value;
+            var output = "";
+            output += name + "'s account is valid till 25/10/2026";
+            alert(output);
+        }
+        function toggleTextbox2() {
+            var textbox = document.getElementById("clienttext");
+            textbox.classList.toggle("hidden");
+            var button = document.getElementById("validitygetter");
+            button.classList.toggle("hidden");
+            var textElement = document.getElementById("framelessText7");
+            textElement.classList.toggle("hidden");
+        }
+
+        function hideChatbox() {
+            window.location.href = "homebanker.html";
+        }
+    </script>
+</head>
+<style>
+    .hidden {
+        top: 0;
+        position: relative;
+        display: none;
+    }
+
+    .frameless-text {
+        top: 0;
+        position: relative;
+        display: none;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .chatbox {
+        top: 0;
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background: #281f1f;
+        border: 1px solid #ccc;
+        overflow-y: scroll;
+        display: none;
+    }
+
+    .message {
+        top: 0;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .user {
+        top: 0;
+        position: relative;
+        text-align: right;
+    }
+
+    .automated-reply {
+        top: 0;
+        position: relative;
+        text-align: left;
+        font-style: italic;
+        color: #888;
+    }
+</style>
+
+<body>
+    <div class="page-wrapper flex-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-avatar">
+                <div class="avatar-image">
+                    <img src="./images/kk.jpg">
+                </div>
+            </div>
+            <ul class="sidebar-links">
+                <!-- <p>What you can do</p> -->
+
+                <ul>
+                    <li><button type="button" class="link-item" onclick="toggleList()">View Huge Transfers</button></li>
+                    <li><button type="button" class="link-item" onclick="toggleloanlist()">Review Loan
+                            Application</button> </li>
+                    <li><button type="button" class="link-item" onclick="toggleCClist()">Review Credit card
+                            Application</button> </li>
+                            <li><button type="button" class="link-item" onclick="togglebilllist()">Bill management</button> </li>
+                    <li><button type="button" class="link-item" onclick="toggleAlert()">Alerts</button></li>
+                    <li><button type="button" class="link-item" onclick="toggleTextbox2()">Check Clients account
+                            validity</button></li>
+                    <li><button type="button" class="link-item" onclick="toggleChatTools()">Live Chat with a
+                            client</button></li>
+                    <li><button type="button" class="link-item" onclick="toggleTextbox()">View Client
+                            Transactions</button></li>
+                    
+
+
+
+                </ul>
+
+        </aside>
+
+        <main>
+
+            <section>
+
+                <nav>
+                    <button class="sidebar-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="./homebanker.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </nav>
+
+                <div class="nav-collapse">
+                    <ul class="nav-links">
+                        <li><a href="./homebanker.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="page-content">
+                <h2>Welcome to HNB</h2>
+                <p>Here you can find all your banking needs</p>
+                <p>Click on the menu to get started</p>
+                <br>
+                <div id="framelessText2" class="hidden">
+                    Get clients transaction by entering client's name and clicking show data
+                </div>
+                <input type="text" id="myTextbox" class="hidden" placeholder="Enter Client's Name">
+
+                <button type="button" id="transGetter" class=" hidden"
+                    style="background: #fafafa; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="showNameData()">Show Data</button>
+
+
+                <textarea id="dataTextbox" rows="4" cols="40" class="hidden" readonly></textarea>
+
+                <!-- Get huge Transfers with the option to approve selected ones-->
+
+                <div id="framelessText" font-size: 16px; line-height: 1.5; class="hidden">
+                    Select the transactions you want to approve then click on (Approve Selected Transactions)
+                </div>
+                <div id="framelessText3" font-size: 16px; line-height: 1.5; class="hidden">
+                    Select the transactions you want to decline then click on (Decline Selected Transactions)
+                </div>
+
+                <ul id="item-list" class="hidden">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 1">
+                            Transactions 1
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 2">
+                            Transactions 2
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 3">
+                            Transactions 3
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 4">
+                            Transactions 4
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Transactions 5">
+                            Transactions 5
+                        </label>
+                    </li>
+                </ul>
+
+
+                <button type="button" id="getchecked"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    class="hidden" onclick="getHugeTransactions()">Approve selected
+                    transactions</button>
+
+                <div id="output"></div>
+                <!--Show Loan Requests and send to admin to approve-->
+
+                <div id="framelessText3" font-size: 16px; line-height: 1.5; class="hidden">
+                    Select the loan you want to approve and click Approve selected loan
+                </div>
+                <ul id="loan-list" class="hidden">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Loan Requested by Peter">
+                            Loan of 10,000$ Requested by Peter
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Loan Requested by Basma">
+                            Loan of 5,000 Requested by Basma
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Loan Requested by Hana">
+                            Loan of 2,000 Requested by Hana
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Loan Requested by Megz">
+                            Loan of 1,000 Requested by Megz
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Loan Requested by Fares">
+                            Loan of 500 Requested by Fares
+                        </label>
+                    </li>
+                </ul>
+
+
+
+                <button type="button" id="getLoans" class="hidden"
+                    style="background: #fffafa; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="getLoanRequests()">Approve Selected
+                    Loans</button>
+                <div id="output"></div>
+                <!--Show Loan Requests and send to admin to approve-->
+
+                <div id="framelessText9" font-size: 16px; line-height: 1.5; class="hidden">
+                    Select the Credit card Application you want to approve and click Approve selected Applicatiom
+                </div>
+                <ul id="cc-list" class="hidden">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Credit Card Applicatiom Requested by Peter">
+                            Credit Card Applicatiom Requested by Peter
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Credit Card Applicatiom  Requested by Basma">
+                            Credit Card Applicatiom Requested by Basma
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Credit Card Applicatiom  Requested by Hana">
+                            Credit Card Applicatiom Requested by Hana
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Credit Card Applicatiom  Requested by Megz">
+                            Credit Card Applicatiom Requested by Megz
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Credit Card Applicatiom  Requested by Fares">
+                            Credit Card Applicatiom Requested by Fares
+                        </label>
+                    </li>
+                </ul>
+
+
+
+                <button type="button" id="getcc" class="hidden"
+                    style="background: #fffefe; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="getCCApp()">Approve Selected
+                    applicaion</button>
+                <div id="output"></div>
+
+
+                <!--Write an Alert and Send  it to clients and admin-->
+                <div id="framelessText4" font-size: 16px; line-height: 1.5; class="hidden">
+                    Write an Alert and Send it to clients and admin by clicking Send Alert
+                </div>
+
+                <input type="text" id="Alertbox" class="hidden" placeholder="Enter The Alert message you want to send">
+
+                <button type="button" id="alertsender" class="hidden"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="SendAlert()">Send Alert</button>
+
+                <div id="textContainer"></div>
+
+
+                <!--Live Chat with a Client in queue-->
+                <div id="framelessText5" font-size: 16px; line-height: 1.5; class="hidden">
+                    Live Chat with a Client in queue
+                </div>
+                <div id="chatbox" class="chatbox"></div>
+                <div>
+                    <input type="chatinput" id="messageInput" class="hidden" placeholder="Type your message">
+                    <button type="chatSend" id="chatsend" class="hidden"
+                        style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                        onclick="sendMessage()">Send</button>
+                </div>
+                <button type="button" class="hidden" style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);" id ="hidebutton" onclick="hideChatbox()">Close Chat</button>
+                <!-- Manage Bill Payment-->
+                <div id="framelessText6" font-size: 16px; line-height: 1.5; class="hidden">
+                    Select the bill and click in what you want to with it
+                </div>
+                <ul id="bill-list" class="hidden">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Cellphones Bill">
+                            Cellphones Bill
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Electricity Bill">
+                            Electricity Bill
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Water Bill">
+                            Water Bill
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="Internet Bill">
+                            Internet Bill
+                        </label>
+                    </li>
+                </ul>
+
+                <button type="button" id="automate" class="hidden"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="automateBill()">Automate Bill</button>
+                <button type="button" id="cancelBill" class="hidden"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="cancelBill()">Cancel Bill
+                    Automation</button>
+                <button id="hidechat" onclick="hideChatbox()"
+                    style="background: #fffefe; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    class="hidden"> Hide Chatbox</button>
+                <!--Check Client account validity-->
+                <div id="framelessText7" font-size: 16px; line-height: 1.5; class="hidden">
+                    Enter the client's name and click show account validity to get account validity
+                </div>
+                <input type="text" id="clienttext" class="hidden" placeholder="Enter Client's Name">
+
+                <button type="button" id="validitygetter" class="hidden"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    onclick="getValidity()">Show Account
+                    Validity</button>
+
+
+                <textarea id="data2Textbox" rows="4" cols="40" class="hidden" readonly></textarea>
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+    <script src="./js/main2.js"></script>
+
+</body>
+
+</html>
