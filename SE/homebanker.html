@@ -12,8 +12,86 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/homebanker.css">
     <script>
-        function toggleList() {
+        var clickcounttranslist = 0;
+        var clickcounttransgetter = 0;
+        var clickcountloanlist = 0;
+        var clickcountcclist = 0;
+        var clickcountbilllist = 0;
+        var clickcountalerts = 0;
+        var clickcountaccvalidity = 0;
+        var clickcountlivechat = 0;
 
+        function toggleList() {
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
             var list = document.getElementById("item-list");
             list.classList.toggle("hidden");
             var button = document.getElementById("getchecked");
@@ -21,6 +99,7 @@
             var output = document.getElementById("output");
             var textElement = document.getElementById("framelessText");
             textElement.classList.toggle("hidden");
+            clickcounttranslist++;
         }
         function getHugeTransactions() {
             window.location.href = "homebanker.html";
@@ -41,12 +120,86 @@
             alert(output);
         }
         function toggleTextbox() {
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
+
             var textbox = document.getElementById("myTextbox");
             textbox.classList.toggle("hidden");
             var button = document.getElementById("transGetter");
             button.classList.toggle("hidden");
             var textElement = document.getElementById("framelessText2");
             textElement.classList.toggle("hidden");
+            var hiddenElements = document.getElementsByClassName("hidden");
+            clickcounttransgetter++;
+
         }
         function showNameData() {
             window.location.href = "homebanker.html";
@@ -58,22 +211,167 @@
             alert(output);
         }
         function toggleloanlist() {
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
             var list = document.getElementById("loan-list");
             list.classList.toggle("hidden");
             var button = document.getElementById("getLoans");
             button.classList.toggle("hidden");
             var textElement = document.getElementById("framelessText3");
             textElement.classList.toggle("hidden");
+            clickcountloanlist++;
         }
         function toggleCClist() {
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
             var list = document.getElementById("cc-list");
             list.classList.toggle("hidden");
             var button = document.getElementById("getcc");
             button.classList.toggle("hidden");
             var textElement = document.getElementById("framelessText9");
             textElement.classList.toggle("hidden");
+            clickcountcclist++;
         }
         function getLoanRequests() {
+
             window.location.href = "homebanker.html";
             var checkboxes = document.getElementsByName("item");
             var items = [];
@@ -110,12 +408,84 @@
             alert(output);
         }
         function toggleAlert() {
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
             var textbox = document.getElementById("Alertbox");
             textbox.classList.toggle("hidden");
             var button = document.getElementById("alertsender");
             button.classList.toggle("hidden");
             var textElement = document.getElementById("framelessText4");
             textElement.classList.toggle("hidden");
+            clickcountalerts++;
         }
         function SendAlert() {
             window.location.href = "homebanker.html";
@@ -123,6 +493,73 @@
             alert(text);
         }
         function toggleChatTools() {
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
             var textbox = document.getElementById("messageInput");
             textbox.classList.toggle("hidden");
             var button = document.getElementById("chatsend");
@@ -133,6 +570,7 @@
             textElement.classList.toggle("hidden");
             var button = document.getElementById("hidebutton");
             button.classList.toggle("hidden");
+            clickcountlivechat++;
 
         }
         function sendMessage() {
@@ -157,6 +595,75 @@
         }
 
         function togglebilllist() {
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountaccvalidity % 2 != 0) {
+                var textbox = document.getElementById("clienttext");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("validitygetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText7");
+                textElement.classList.toggle("hidden");
+                clickcountaccvalidity++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
             var list = document.getElementById("bill-list");
             list.classList.toggle("hidden");
             var button = document.getElementById("automate");
@@ -165,6 +672,7 @@
             button2.classList.toggle("hidden");
             var textElement = document.getElementById("framelessText6");
             textElement.classList.toggle("hidden");
+            clickcountbilllist++;
         }
         function automateBill() {
             window.location.href = "homebanker.html";
@@ -210,12 +718,84 @@
             alert(output);
         }
         function toggleTextbox2() {
+            if (clickcountalerts % 2 != 0) {
+                var textbox = document.getElementById("Alertbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("alertsender");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText4");
+                textElement.classList.toggle("hidden");
+                clickcountalerts++;
+            }
+            if (clickcountlivechat % 2 != 0) {
+                var textbox = document.getElementById("messageInput");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("chatsend");
+                button.classList.toggle("hidden");
+                var chatbox = document.getElementById("chatbox");
+                chatbox.style.display = "block";
+                var textElement = document.getElementById("framelessText5");
+                textElement.classList.toggle("hidden");
+                var button = document.getElementById("hidebutton");
+                button.classList.toggle("hidden");
+                clickcountlivechat++;
+            }
+            if (clickcountbilllist % 2 != 0) {
+                var list = document.getElementById("bill-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("automate");
+                button.classList.toggle("hidden");
+                var button2 = document.getElementById("cancelBill");
+                button2.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText6");
+                textElement.classList.toggle("hidden");
+                clickcountbilllist++;
+            }
+            if (clickcountcclist % 2 != 0) {
+                var list = document.getElementById("cc-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getcc");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText9");
+                textElement.classList.toggle("hidden");
+                clickcountcclist++;
+            }
+            if (clickcountloanlist % 2 != 0) {
+                var list = document.getElementById("loan-list");
+                list.classList.toggle("hidden");
+                var button = document.getElementById("getLoans");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText3");
+                textElement.classList.toggle("hidden");
+                clickcountloanlist++;
+            }
+            if (clickcounttransgetter % 2 != 0) {
+                var textbox = document.getElementById("myTextbox");
+                textbox.classList.toggle("hidden");
+                var button = document.getElementById("transGetter");
+                button.classList.toggle("hidden");
+                var textElement = document.getElementById("framelessText2");
+                textElement.classList.toggle("hidden");
+                var hiddenElements = document.getElementsByClassName("hidden");
+                clickcounttransgetter++;
+            }
+            if (clickcounttranslist % 2 != 0) {
+                var list2 = document.getElementById("item-list");
+                list2.classList.toggle("hidden");
+                var button2 = document.getElementById("getchecked");
+                button2.classList.toggle("hidden");
+                var output = document.getElementById("output");
+                var textElement2 = document.getElementById("framelessText");
+                textElement2.classList.toggle("hidden");
+                clickcounttranslist++;
+            }
             var textbox = document.getElementById("clienttext");
             textbox.classList.toggle("hidden");
             var button = document.getElementById("validitygetter");
             button.classList.toggle("hidden");
             var textElement = document.getElementById("framelessText7");
             textElement.classList.toggle("hidden");
+            clickcountaccvalidity++;
         }
 
         function hideChatbox() {
@@ -288,7 +868,8 @@
                             Application</button> </li>
                     <li><button type="button" class="link-item" onclick="toggleCClist()">Review Credit card
                             Application</button> </li>
-                            <li><button type="button" class="link-item" onclick="togglebilllist()">Bill management</button> </li>
+                    <li><button type="button" class="link-item" onclick="togglebilllist()">Bill management</button>
+                    </li>
                     <li><button type="button" class="link-item" onclick="toggleAlert()">Alerts</button></li>
                     <li><button type="button" class="link-item" onclick="toggleTextbox2()">Check Clients account
                             validity</button></li>
@@ -296,7 +877,7 @@
                             client</button></li>
                     <li><button type="button" class="link-item" onclick="toggleTextbox()">View Client
                             Transactions</button></li>
-                    
+
 
 
 
@@ -313,8 +894,9 @@
                         <i class="fa-solid fa-bars"></i>
                     </button>
                     <ul class="nav-links">
-                        <li><a href="./homebanker.html">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="./pages/about.html">About</a></li>
+                        <li><a href="./pages/contact.html">Contact</a></li>
                     </ul>
                     <button class="nav-toggler">
                         <i class="fa-solid fa-bars"></i>
@@ -323,13 +905,14 @@
 
                 <div class="nav-collapse">
                     <ul class="nav-links">
-                        <li><a href="./homebanker.html">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="./pages/about.html">About</a></li>
+                        <li><a href="./pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </section>
             <section class="page-content">
-                <h2>Welcome to HNB</h2>
+                <h2>Welcome to Beso's Bank</h2>
                 <p>Here you can find all your banking needs</p>
                 <p>Click on the menu to get started</p>
                 <br>
@@ -511,7 +1094,9 @@
                         style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
                         onclick="sendMessage()">Send</button>
                 </div>
-                <button type="button" class="hidden" style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);" id ="hidebutton" onclick="hideChatbox()">Close Chat</button>
+                <button type="button" class="hidden"
+                    style="background: #ffffff; border: hsl(0, 100%, 99%); cursor: pointer; color: rgb(10, 10, 10);"
+                    id="hidebutton" onclick="hideChatbox()">Close Chat</button>
                 <!-- Manage Bill Payment-->
                 <div id="framelessText6" font-size: 16px; line-height: 1.5; class="hidden">
                     Select the bill and click in what you want to with it
